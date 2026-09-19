@@ -1,0 +1,34 @@
+﻿@model OrderModel
+
+<h2>Информация о заказе</h2>
+<table>
+    <tr>
+        <td><label>Номер заказа: </label></td>
+        <td><input readonly="true" value="@Model.Id"></td>
+    </tr>
+    <tr>
+        <td><label>Город отправителя: </label></td>
+        <td><input readonly="true" value="@Model.CitySender"></td>
+    </tr>
+    <tr>
+        <td><label>Адрес отправителя: </label></td>
+        <td><input readonly="true" value="@Model.AdressSender"></td>
+    </tr>
+    <tr>
+        <td><label>Город получателя: </label></td>
+        <td><input readonly="true" value="@Model.CityReceiver"></td>
+    </tr>
+    <tr>
+        <td><label>Адрес получателя: </label></td>
+        <td><input readonly="true" value="@Model.AdressReceiver"></td>
+    </tr>
+    <tr>
+        <td><label>Вес: </label></td>
+        <td><input readonly="true" value="@Model.Weight"></td>
+    </tr>
+    <tr>
+        <td><label>Дата забора груза: </label></td>
+        <td><input readonly="true" value="@Model.PickDate"></td>
+    </tr>
+</table>
+<button onclick="location.href='@Url.Action("AllOrders", "Home")'">Назад</button>

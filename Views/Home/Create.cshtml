@@ -1,0 +1,37 @@
+﻿@model OrderRequestModel
+
+@{
+    ViewData["Title"] = "Создание заказа";
+}
+
+<h1>Создание заказа</h1>
+<form method="post">
+    <table>
+        <tr>
+            <td><label asp-for="CitySender">Город отправителя: </label></td>
+            <td><input asp-for="CitySender" required /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="AdressSender">Адрес отправителя: </label></td>
+            <td><input asp-for="AdressSender" required /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="CityReceiver">Город получателя: </label></td>
+            <td><input asp-for="CityReceiver" required /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="AdressReceiver">Адрес получателя: </label></td>
+            <td><input asp-for="AdressReceiver" required /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Weight">Вес: </label></td>
+            <td><input type="number" asp-for="Weight" required /></td>
+            <span asp-validation-for="Weight" class="text-danger"></span>
+        </tr>
+        <tr>
+            <td><label asp-for="PickDate">Дата забора груза: </label></td>
+            <td><input type="datetime-local" asp-for="PickDate" required /></td>
+        </tr>
+    </table>
+    <input type="submit" value="Создать"/>
+</form>
