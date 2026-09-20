@@ -12,21 +12,22 @@
             <td><input asp-for="CitySender" required /></td>
         </tr>
         <tr>
-            <td><label asp-for="AdressSender">Адрес отправителя: </label></td>
-            <td><input asp-for="AdressSender" required /></td>
+            <td><label asp-for="AddressSender">Адрес отправителя: </label></td>
+            <td><input asp-for="AddressSender" required /></td>
         </tr>
         <tr>
             <td><label asp-for="CityReceiver">Город получателя: </label></td>
             <td><input asp-for="CityReceiver" required /></td>
         </tr>
         <tr>
-            <td><label asp-for="AdressReceiver">Адрес получателя: </label></td>
-            <td><input asp-for="AdressReceiver" required /></td>
+            <td><label asp-for="AddressReceiver">Адрес получателя: </label></td>
+            <td><input asp-for="AddressReceiver" required /></td>
         </tr>
         <tr>
             <td><label asp-for="Weight">Вес: </label></td>
-            <td><input type="number" asp-for="Weight" required /></td>
-            <span asp-validation-for="Weight" class="text-danger"></span>
+            <td><input type="number" asp-for="Weight" required />
+                <span asp-validation-for="Weight" class="text-danger"></span>
+            </td>
         </tr>
         <tr>
             <td><label asp-for="PickDate">Дата забора груза: </label></td>

@@ -6,8 +6,6 @@ namespace VestaTask.Models
     {
         public DbSet<OrderModel> Orders => Set<OrderModel>();
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
-        {
-            Database.EnsureCreated();
-        }
+        { }
     }
 }

@@ -1,5 +1,9 @@
 ﻿@model List<OrderModel>
 
+@{
+    ViewData["Title"] = "Все заказы";
+}
+
 <style>
     .OrdersTable {
         border-collapse: collapse;
@@ -37,9 +41,9 @@
         <tr class="TableRows" onclick="location.href='@Url.Action("GetOrderById", "Home", new { id = order.Id })'">
             <td>@order.Id</td>
             <td>@order.CitySender</td>
-            <td>@order.AdressSender</td>
+            <td>@order.AddressSender</td>
             <td>@order.CityReceiver</td>
-            <td>@order.AdressReceiver</td>
+            <td>@order.AddressReceiver</td>
             <td>@order.Weight</td>
             <td>@order.PickDate</td>
         </tr>

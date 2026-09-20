@@ -5,35 +5,23 @@ namespace VestaTask.Services
 {
     public class OrderService : IOrderService
     {
-        private readonly ApplicationContext db;
+        private readonly IOrderRepository repository;
         private readonly ILogger<OrderService> logger;
 
-        public OrderService (ApplicationContext db, ILogger<OrderService> logger)
+        public OrderService (IOrderRepository repository, ILogger<OrderService> logger)
         {
-            this.db = db;
+            this.repository = repository;
             this.logger = logger;
         }
 
         public async Task<OrderModel?> GetById(int id)
         {
-            return await db.Orders
-                .AsNoTracking()
-                .FirstOrDefaultAsync(order => order.Id == id);
+            return await repository.GetById(id);
         }
 
         public async Task<List<OrderModel>> GetAll()
         {
-            try
-            {
-                return await db.Orders
-                .AsNoTracking()
-                .ToListAsync();
-            }
-            catch (Exception ex)
-            {
-                logger.LogError(ex, "Ошибка при получении списка заказов");
-                return new List<OrderModel>();
-            }
+            return await repository.GetAll();
         }
 
         public async Task AddOrder(OrderRequestModel order)
@@ -41,15 +29,14 @@ namespace VestaTask.Services
             var newOrder = new OrderModel()
             {
                 CitySender = order.CitySender,
-                AdressSender = order.AdressSender,
+                AddressSender = order.AddressSender,
                 CityReceiver = order.CityReceiver,
-                AdressReceiver = order.AdressReceiver,
+                AddressReceiver = order.AddressReceiver,
                 Weight = order.Weight,
                 PickDate = order.PickDate
             };
 
-            db.Orders.Add(newOrder);
-            db.SaveChanges();
+            await repository.Add(newOrder);
         }
     }
 }

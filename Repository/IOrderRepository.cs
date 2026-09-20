@@ -1,11 +1,8 @@
 ﻿using VestaTask.Models;
 
-namespace VestaTask.Repository
+public interface IOrderRepository
 {
-    public interface IOrderRepository
-    {
-        Task<OrderModel?> GetById(int id);
-        Task<List<OrderModel>> GetAll();
-        Task AddOrder(OrderModel order);
-    }
+    Task<OrderModel?> GetById(int id);
+    Task<List<OrderModel>> GetAll();
+    Task Add(OrderModel order);
 }

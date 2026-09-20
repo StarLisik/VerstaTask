@@ -1,34 +1,46 @@
 ﻿@model OrderModel
 
+@{
+    ViewData["Title"] = "Просмотр заказа";
+}
+
+<head>
+  <style>
+   .info-td {
+    text-align: center;
+   }
+  </style>
+ </head>
+
 <h2>Информация о заказе</h2>
 <table>
     <tr>
-        <td><label>Номер заказа: </label></td>
-        <td><input readonly="true" value="@Model.Id"></td>
+        <td><label><b>Номер заказа: </b></label></td>
+        <td class="info-td"><label>@Model.Id</label></td>
     </tr>
     <tr>
-        <td><label>Город отправителя: </label></td>
-        <td><input readonly="true" value="@Model.CitySender"></td>
+        <td><label><b>Город отправителя: </b></label></td>
+        <td class="info-td"><label>@Model.CitySender</label></td>
     </tr>
     <tr>
-        <td><label>Адрес отправителя: </label></td>
-        <td><input readonly="true" value="@Model.AdressSender"></td>
+        <td><label><b>Адрес отправителя: </b></label></td>
+        <td class="info-td"><label>@Model.AddressSender</label></td>
     </tr>
     <tr>
-        <td><label>Город получателя: </label></td>
-        <td><input readonly="true" value="@Model.CityReceiver"></td>
+        <td><label><b>Город получателя: </b></label></td>
+        <td class="info-td"><label>@Model.CityReceiver</label></td>
     </tr>
     <tr>
-        <td><label>Адрес получателя: </label></td>
-        <td><input readonly="true" value="@Model.AdressReceiver"></td>
+        <td><label><b>Адрес получателя: </b></label></td>
+        <td class="info-td"><label>@Model.AddressReceiver</label></td>
     </tr>
     <tr>
-        <td><label>Вес: </label></td>
-        <td><input readonly="true" value="@Model.Weight"></td>
+        <td><label><b>Вес: </b></label></td>
+        <td class="info-td"><label>@Model.Weight</label></td>
     </tr>
     <tr>
-        <td><label>Дата забора груза: </label></td>
-        <td><input readonly="true" value="@Model.PickDate"></td>
+        <td><label><b>Дата забора груза: </b></label></td>
+        <td class="info-td"><label>@Model.PickDate</label></td>
     </tr>
 </table>
 <button onclick="location.href='@Url.Action("AllOrders", "Home")'">Назад</button>
