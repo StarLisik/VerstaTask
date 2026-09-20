@@ -1,4 +1,4 @@
-﻿namespace VestaTask.Models
+﻿namespace VerstaTask.Models
 {
     public class ErrorViewModel
     {

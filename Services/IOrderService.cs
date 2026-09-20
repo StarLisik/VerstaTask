@@ -1,6 +1,6 @@
-﻿using VestaTask.Models;
+﻿using VerstaTask.Models;
 
-namespace VestaTask.Services
+namespace VerstaTask.Services
 {
     public interface IOrderService
     {

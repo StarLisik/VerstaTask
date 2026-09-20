@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using VestaTask.Models;
-using VestaTask.Repository;
-using VestaTask.Services;
+using VerstaTask.Models;
+using VerstaTask.Repository;
+using VerstaTask.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

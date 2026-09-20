@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace VestaTask.Models
+namespace VerstaTask.Models
 {
     public class OrderRequestModel
     {

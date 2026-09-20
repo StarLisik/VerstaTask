@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace VestaTask.Models
+namespace VerstaTask.Models
 {
     public class ApplicationContext : DbContext
     {

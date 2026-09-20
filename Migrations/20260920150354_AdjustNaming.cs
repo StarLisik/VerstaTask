@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace VestaTask.Migrations
+namespace VerstaTask.Migrations
 {
     /// <inheritdoc />
     public partial class AdjustNaming : Migration

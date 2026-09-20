@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using VestaTask.Models;
+using VerstaTask.Models;
 
-namespace VestaTask.Repository
+namespace VerstaTask.Repository
 {
     public class OrderRepository : IOrderRepository
     {

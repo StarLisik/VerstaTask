@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using VestaTask.Models;
+using VerstaTask.Models;
 
-namespace VestaTask.Services
+namespace VerstaTask.Services
 {
     public class OrderService : IOrderService
     {

@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using VestaTask.Models;
+using VerstaTask.Models;
 
 #nullable disable
 
-namespace VestaTask.Migrations
+namespace VerstaTask.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
     [Migration("20260920150354_AdjustNaming")]
@@ -20,7 +20,7 @@ namespace VestaTask.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.20");
 
-            modelBuilder.Entity("VestaTask.Models.OrderModel", b =>
+            modelBuilder.Entity("VerstaTask.Models.OrderModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

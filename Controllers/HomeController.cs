@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using VestaTask.Models;
-using VestaTask.Services;
+using VerstaTask.Models;
+using VerstaTask.Services;
 
-namespace VestaTask.Controllers
+namespace VerstaTask.Controllers
 {
     public class HomeController : Controller
     {
